@@ -3,7 +3,7 @@ import dlib
 import numpy as np
 import cv2
 
-path1 = "aadhardata/download.jpg"
+path1 = "aadhardata/salmankhan.jpg"
 path2 = "sampledata/salmansample.jpg"
 
 def getFace(img):
