@@ -3,8 +3,8 @@ import dlib
 import numpy as np
 import cv2
 
-path1 = "aadhardata/salmankhan.jpg"
-path2 = "sampledata/salmansample.jpg"
+path1 = "aadhardata/salmansample.jpg"
+path2 = "sampledata/download.jpg"
 
 def getFace(img):
     face_detector = dlib.get_frontal_face_detector()
@@ -27,9 +27,9 @@ def getSimilarity(image1, image2):
 img1 = cv2.imread(path1)
 img2 = cv2.imread(path2)
 
-distance = getSimilarity(img1,img2)
-print(distance)
-if distance < .6:
+euclidean_distance = getSimilarity(img1,img2)
+print(euclidean_distance)
+if euclidean_distance < .6:
   print("Faces are of the same person.")
 else:
   print("Faces are of different people.")
